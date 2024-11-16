@@ -341,11 +341,13 @@ import { Suspense } from 'react';
 import CompanyList from '@/components/CompanyList';
 import companies from '@/app/data/companies';
 import HeroBox from '@/components/HeroBox';
+import CompanyFilter from '@/components/Filters';
 
 export default function Home() {
   return (
     <Suspense>
       <HeroBox/>
+      <CompanyFilter/>
       <CompanyList companies={companies} />
     </Suspense>
   );

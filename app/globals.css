@@ -2,30 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  scroll-behavior: smooth !important;
-}
-
-/* It makes the HTML progress bar filling smooth when value change. */
-progress::-webkit-progress-value {
-  transition: 0.6s width ease-out;
-}
-
 @layer base {
-  .btn-gradient {
-    @apply !bg-gradient !bg-[length:300%_300%] hover:saturate-[1.2] shadow duration-100 !border-0 !border-transparent !bg-transparent animate-shimmer disabled:!bg-none disabled:!bg-gray-500/30  !text-white;
-  }
-  .btn {
-    @apply !capitalize;
-  }
   :root {
-    --background: 0 0% 100%;
+    --background: 240 12% 98.5%; /* Adjusted to reflect #FBFAF8 */
     --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --card: var(--background);
+    --card-foreground: var(--foreground);
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
     --primary: 240 5.9% 10%;
     --primary-foreground: 0 0% 98%;
     --secondary: 240 4.8% 95.9%;
@@ -45,7 +29,7 @@ progress::-webkit-progress-value {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
@@ -57,10 +41,10 @@ progress::-webkit-progress-value {
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --card: var(--background);
+    --card-foreground: var(--foreground);
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
     --primary: 0 0% 98%;
     --primary-foreground: 240 5.9% 10%;
     --secondary: 240 3.7% 15.9%;
